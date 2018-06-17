@@ -1,5 +1,7 @@
-Feature: Login Feature
-  Verify if user is able to Login in to the site
+Feature: Uso de selenium con cucumber
+  Como programador
+  Quiero un método de testeo
+  Para aumentar la calidad de mis programas
 
   Scenario: abrir búsqueda en Google
     Given el usuario navega a la página de Google

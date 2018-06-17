@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         format = { "pretty", "html:target/cucumber" },
-        features = "classpath:cucumber/app.feature"
+        features = "classpath:cucumber/"
 )
 
 public class AppTest {
