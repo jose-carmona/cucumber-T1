@@ -1,6 +1,6 @@
 Feature: Uso de selenium con cucumber
   Como programador
-  Quiero un método de testeo
+  Quiero usar cucumber como método de testeo
   Para aumentar la calidad de mis programas
 
   Scenario: abrir búsqueda en Google
