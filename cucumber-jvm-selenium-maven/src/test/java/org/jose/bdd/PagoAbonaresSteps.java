@@ -35,7 +35,7 @@ public class PagoAbonaresSteps {
       driver.quit();
     }
 
-    @Given("^que el usuario navega a la página de pago de abonarés$")
+    @When("^navego a la página de pago de abonarés en la Sede Electrónica$")
     public void el_usuario_navega_a_la_página_de_Google() throws Throwable {
       // Sede electrónica de Hacienda Local -> Pago de Abonarés
       driver.get("https://sede.haciendalocal.es/pagoAbonares");
@@ -45,7 +45,7 @@ public class PagoAbonaresSteps {
       page = PageFactory.initElements(driver, PagoAbonaresPage.class);
     }
 
-    @Given("^que el usuario introduce los siguientes datos el formulario de pago de abonarés$")
+    @When("^introduzco los siguientes datos en el formulario de pago de abonarés$")
     public void que_el_usuario_introduce_los_siguientes_datos_el_formulario_de_pago_de_abonarés(DataTable arg1) throws Throwable {
       // completamos formulario con los datos de la tabla
       List<List<String>> data = arg1.raw();
@@ -60,14 +60,14 @@ public class PagoAbonaresSteps {
       Thread.sleep(500);
     }
 
-    @When("^pulsa el botón pagar$")
+    @When("^pulso el botón pagar$")
     public void pulsa_el_botón_pagar() throws Throwable {
         page.pagar();
         Thread.sleep(500);
         page = PageFactory.initElements(driver, PagoAbonaresPage.class);
     }
 
-    @Then("^Debe ver el error \"([^\"]*)\"$")
+    @Then("^Debo ver el mensaje de error \"([^\"]*)\"$")
     public void debe_ver_el_error(String err) throws Throwable {
       assertEquals(page.getTextoError(), err);
     }

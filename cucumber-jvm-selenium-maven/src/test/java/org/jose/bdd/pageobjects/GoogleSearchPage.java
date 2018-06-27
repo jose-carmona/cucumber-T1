@@ -10,19 +10,22 @@ import org.openqa.selenium.WebDriver;
 import org.jose.bdd.pageobjects.BasePage;
 
 public class GoogleSearchPage extends BasePage {
-    // The element is now looked up using the name attribute,
-    // and we never look it up once it has been used the first time
+
     @FindBy(how = How.NAME, using = "q")
-    @CacheLookup
     private WebElement searchBox;
+
+    @FindBy(how = How.NAME, using = "btnK")
+    private WebElement voyATenerSuerteButton;
 
     public GoogleSearchPage(WebDriver driver) {
         super(driver);
     }
 
     public void searchFor(String text) {
-        // We continue using the element just as before
         searchBox.sendKeys(text);
-        searchBox.submit();
+    }
+
+    public void search() {
+      voyATenerSuerteButton.submit();
     }
 }

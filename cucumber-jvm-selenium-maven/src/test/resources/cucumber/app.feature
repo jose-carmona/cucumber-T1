@@ -1,7 +1,10 @@
-Feature: Uso de selenium con cucumber
-  Como programador
-  Quiero usar cucumber como método de testeo
-  Para aumentar la calidad de mis programas
+Feature: cucumber + selenium as tests framework
+As a programmer
+I want to use cucumber and selenium as a tests framework
+To improve the quality of my programs
 
-  Scenario: abrir búsqueda en Google
-    Given el usuario navega a la página de Google
+  Scenario: search "cucumber + selenium" on Google 
+    Given I am on Google search page
+    When I enter "cucumber + selenium" as search phrase
+    And I click on search button
+    Then results are shown

@@ -4,10 +4,10 @@ Característica: Uso de cucumber con lenguaje Gherkin en español
   Quiero escribir mis test en español
   Para aumentar la claridad de los mismos
 
-  Escenario: pago de un abonaré desde la Sede Electrónica de Hacienda Local
-    Dado que el usuario navega a la página de pago de abonarés
-      Y  que el usuario introduce los siguientes datos el formulario de pago de abonarés
+  Escenario: El pago de un abonaré inexistente en la Sede Electrónica debe mostrar un mensaje de error
+    Cuando navego a la página de pago de abonarés en la Sede Electrónica
+      Y introduzco los siguientes datos en el formulario de pago de abonarés
          | emisora  | sufijo | abonare     | dc | control | importe |
          | 12345678 | 500    | 12345678901 | 12 | 112233  | 100     |
-    Cuando pulsa el botón pagar
-    Entonces Debe ver el error "No existe el abonaré indicado. Compruebe que la información introducida es correcta"
+      Y pulso el botón pagar
+    Entonces Debo ver el mensaje de error "No existe el abonaré indicado. Compruebe que la información introducida es correcta"
