@@ -3,10 +3,12 @@
 Busco un sistema de test bdd:
 * Basado en java
 * Con lenguaje Gherkin (cucumber)
-* Test sobre web (selenium)
-* Test sobre RESTful con [REST Assured](http://rest-assured.io)
 * maven
 * docker
+* Test sobre web en general (selenium)
+* Test sobre RESTful con [REST Assured](http://rest-assured.io)
+* Test sobre PL/SQL en BD
+* Test sobre PrimeFaces
 
 ### Cucumber-jvm
 

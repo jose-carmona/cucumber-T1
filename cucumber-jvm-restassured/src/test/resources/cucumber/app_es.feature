@@ -1,10 +1,10 @@
 # language: es
 Característica: Uso de cucumber para testear un APIs
-  Como Contribuyente
-  Quiero acceder a las Entidades Bancarias de un Municipio
-  Para saber dónde puedo hacer efectivo un pago
+  Como Friki
+  Quiero acceder al API de Rick and Morty
+  Para hacer que el mundo sea un poco mejor
 
-  Escenario: La API debe mostrar las Entidades Bancarias de una Entidad
-    Dado que filtro en las Entidades Bancarias del Municipio 'BENAMEJI'
-    Cuando invoco al API de Entidades Bancarias de un Municipio
-    Entonces debo obtener una Entidad Bancaria con código CSB '0237'
+  Escenario: La API debe mostrar información sobre Rick Sanchez
+    Dado que el ID del personaje es 1
+    Cuando invoco al API de personajes de Rick y Morty
+    Entonces el API de personajes de Rick y Morty debe mostrar el nombre 'Rick Sanchez'
