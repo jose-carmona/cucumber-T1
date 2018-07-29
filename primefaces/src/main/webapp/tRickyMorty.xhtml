@@ -6,25 +6,25 @@
                 template="/WEB-INF/template.xhtml">
 
     <ui:define name="implementation">
+      <p:dataTable var="character" value="#{charactersService.characters}">
 
-      <p:dataTable var="car" value="#{dtBasicView.cars}">
-
-        <p:column headerText="Id">
-          <h:outputText value="#{car.id}" />
+        <p:column headerText="Nombre">
+          <h:outputText value="#{character.name}" />
         </p:column>
 
-        <p:column headerText="Year">
-          <h:outputText value="#{car.year}" />
+        <p:column headerText="Estatus">
+          <h:outputText value="#{character.status}" />
         </p:column>
 
-        <p:column headerText="Brand">
-          <h:outputText value="#{car.brand}" />
+        <p:column headerText="Especies">
+          <h:outputText value="#{character.species}" />
         </p:column>
 
-        <p:column headerText="Color">
-          <h:outputText value="#{car.color}" />
+        <p:column headerText="Género">
+          <h:outputText value="#{character.gender}" />
         </p:column>
 
       </p:dataTable>
+
     </ui:define>
 </ui:composition>

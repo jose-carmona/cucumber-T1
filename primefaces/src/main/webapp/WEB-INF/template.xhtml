@@ -19,28 +19,36 @@
     </h:head>
 
     <h:body>
-        <div class="layout-wrapper">
+      <div class="layout-wrapper">
+        <p:layout>
 
+          <p:layoutUnit position="west" resizable="true" size="240" minSize="200" maxSize="300">
+            <ui:include src="./menu.xhtml"></ui:include>
+          </p:layoutUnit>
+
+          <p:layoutUnit position="center">
             <div class="layout-content">
-                <ui:insert name="content">
-                    <div class="content-section content-submenu">
-                        <ui:insert name="submenu"></ui:insert>
-                    </div>
-                    <div class="content-section content-introduction">
-                        <h1><ui:insert name="title"></ui:insert></h1>
-                        <p><ui:insert name="description"></ui:insert></p>
-                    </div>
-                    <div class="content-section content-implementation">
-                        <ui:insert name="implementation"></ui:insert>
-                    </div>
-                    <div class="content-section content-source">
-                        <ui:insert name="source"></ui:insert>
-                    </div>
-                </ui:insert>
+              <ui:insert name="content">
+                  <div class="content-section content-submenu">
+                      <ui:insert name="submenu"></ui:insert>
+                  </div>
+                  <div class="content-section content-introduction">
+                      <h1><ui:insert name="title"></ui:insert></h1>
+                      <p><ui:insert name="description"></ui:insert></p>
+                  </div>
+                  <div class="content-section content-implementation">
+                      <ui:insert name="implementation"></ui:insert>
+                  </div>
+                  <div class="content-section content-source">
+                      <ui:insert name="source"></ui:insert>
+                  </div>
+              </ui:insert>
             </div>
+          </p:layoutUnit>
 
-        </div>
+        </p:layout>
 
+      </div>
     </h:body>
 
 </html>
